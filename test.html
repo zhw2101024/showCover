@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<title>test</title>
+    <style type="text/css">
+        body {margin: 0;}
+        #showButton {margin: 10px;padding: 0;border: 5px solid red;cursor: pointer}
+        .content {width: 800px;height: 500px;margin: 10px;padding: 10px;}
+    </style>
+    <!--
+    <script type="text/javascript" src="jquery.js"></script>
+    -->
+    <script type="text/javascript" src="http://www.newhua.com/newindex/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="cover.js"></script>
+    </head>
+    <body>
+        <div>
+            <div id="buttonDiv">
+                <button id="showButton">show</button>
+            </div>
+            <div id="content1" class="content">
+                <span>content1_1</span><br />
+                <span>content1_2</span>
+            </div>
+            <div id="content2" class="content">
+                <span>content2_1</span><br />
+                <span>content2_2</span>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var content = $("#content1");
+            var boxcontent = $("<div>", {
+                "id": "boxcontent",
+                html: "<img src='http://www.onlinedown.net/newhuagg/sogou300180.gif' />",
+                css: {
+                    width: "300px",
+                    height: "180px"
+                }
+            });
+
+            var options = {
+                "html": boxcontent,
+                //"anchor": $("#showButton"),
+                "debug": false
+                };
+            content.showCover(options);
+        </script>
+    </body>
+</html>
